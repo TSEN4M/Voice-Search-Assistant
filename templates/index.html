@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+    <title>Voice Search</title>
+</head>
+<body>
+    <div id="lottie-animation"></div>
+
+    <!-- Script to load and play the animation -->
+    <script>
+        // Load and play the Lottie animation
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/cad66bc4-48b3-4bb2-a1c3-0076c42cfb3d/rZ1ou2wvsV.json'
+        });
+    </script>
+    <h1>I am listening...</h1>
+    <form action="/search" method="post">
+        <button type="submit">Speak here</button>
+    </form>
+</body>
+</html>
